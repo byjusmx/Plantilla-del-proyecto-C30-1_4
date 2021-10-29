@@ -8,7 +8,7 @@ var canvas;
 var palyer, playerBase;
 var computer, computerBase;
 
-//Declare an array for arrows playerArrows = [ ]
+//Declar una matriz para las flechas playerArrows = [ ]
 var playerArrows = [];
 
 var arrow;
@@ -58,11 +58,11 @@ function draw() {
 
   Engine.update(engine);
 
-  // Title
+  // Título
   fill("#FFFF");
   textAlign("center");
   textSize(40);
-  text("EPIC ARCHERY", width / 2, 100);
+  text("TIRO CON ARCO ÉPICO", width / 2, 100);
 
  
   playerBase.display();
@@ -75,7 +75,7 @@ function draw() {
   playerArcher.display();
   computerArcher.display()
 
- // Uncomment and use correct for loop to display arrow using showArrow() function
+ // Descomenta y usa el bucle correcto for para mostrar la flecha usando la función showArrow()
 //  for (var i=0; i<playerArrows.length; i++) 
 //  {
 //  showArrows(i, playerArrows);
@@ -97,10 +97,10 @@ function draw() {
 
 }
 
-/*********** Choose correct keyPressed() function out of these *************/
+/*********** Elige la función correcta keyPressed() de estas *************/
 
-// function keyPressed() {
-//     // create an arrow object and add into an array ; set its angle same as angle of playerArcher
+// función keyPressed() {
+//     // crea un objeto flecha y agrégalo a la matriz; establece su ángulo igual que el de playerArcher
 //     var posX = playerArcher.body.position.x;
 //     var posY = playerArcher.body.position.y;
 //     var angle = playerArcher.body.angle+PI/2;
@@ -111,9 +111,9 @@ function draw() {
 // }
 
 
-// function keyPressed() {
+// función keyPressed() {
 //   if(keyCode === 32){
-//     // create an arrow object and add into an array ; set its angle same as angle of playerArcher
+//     // crea un objeto flecha y agrégalo a la matriz; establece su ángulo igual que el de playerArcher
 //     var posX = playerArcher.body.position.x;
 //     var posY = playerArcher.body.position.y;
 //     var angle = playerArcher.body.angle+PI/2;
@@ -125,9 +125,9 @@ function draw() {
 // }
 
 
-// function keyPressed() {
+// función keyPressed() {
 //   if(keyCode === 32){
-//     // create an arrow object and add into an array ; set its angle same as angle of playerArcher
+//     // crea un objeto flecha y agrégalo a la matriz; establece su ángulo igual que el de playerArcher
 //     var posX = playerArcher.body.position.x;
 //     var posY = playerArcher.body.position.y;
 //     var angle = playerArcher.body.angle+PI/2;
@@ -143,7 +143,7 @@ function draw() {
 function keyReleased () {
 
   if(keyCode === 32){
-    //call shoot() function for each arrow in an array playerArrows
+    //llama a la función shoot() para cada flecha en una matriz playerArrows
     if (playerArrows.length) {
       var angle = playerArcher.body.angle+PI/2;
       playerArrows[playerArrows.length - 1].shoot(angle);
@@ -151,7 +151,7 @@ function keyReleased () {
   }
 
 }
-//Display arrow and Tranjectory
+//Muestra la flecha y trayectoria
 function showArrows(index, arrows) {
   arrows[index].display();
   
